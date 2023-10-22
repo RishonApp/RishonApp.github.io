@@ -3,15 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"firebase-messaging-sw.js": "28994524307a1e6df24064de52c99338",
-"canvaskit/canvaskit.wasm": "f48eaf57cada79163ec6dec7929486ea",
+const RESOURCES = {"canvaskit/canvaskit.wasm": "f48eaf57cada79163ec6dec7929486ea",
 "canvaskit/canvaskit.js": "76f7d822f42397160c5dfc69cbc9b2de",
 "canvaskit/skwasm.js": "1df4d741f441fa1a4d10530ced463ef8",
 "canvaskit/skwasm.worker.js": "19659053a277272607529ef87acf9d8a",
 "canvaskit/chromium/canvaskit.wasm": "fc18c3010856029414b70cae1afc5cd9",
 "canvaskit/chromium/canvaskit.js": "8c8392ce4a4364cbb240aa09b5652e05",
 "canvaskit/skwasm.wasm": "6711032e17bf49924b2b001cef0d3ea3",
-"assets/NOTICES": "b2c6b1dcc2bb0890c077dec432a0c4f4",
+"assets/NOTICES": "7de3faf897d04be2a5ebb26b970d87f4",
 "assets/AssetManifest.bin": "3383390207256ea73b5315f9a3718b4a",
 "assets/assets/whatsapp.svg": "5902f900874bc62c207813495b81c30e",
 "assets/shaders/ink_sparkle.frag": "f8b80e740d33eb157090be4e995febdf",
@@ -23,9 +22,9 @@ const RESOURCES = {"firebase-messaging-sw.js": "28994524307a1e6df24064de52c99338
 "assets/AssetManifest.json": "1b699ce661dbc6f54d17bb9365fc4c16",
 "favicon.png": "4299a665b601dbf6afb2d40c7b2db6ed",
 "version.json": "5cb19e1d83d622ff4ed178c2af1cc44e",
-"main.dart.js": "8bb60ab2f766b2d0e334e6dd5fc747b7",
-"index.html": "6f6361373620068ed36fa285f31cad03",
-"/": "6f6361373620068ed36fa285f31cad03",
+"main.dart.js": "78d55deeb1c61844ae9fffe4e1e2a650",
+"index.html": "3244499927684f16509d0c6478d45c3d",
+"/": "3244499927684f16509d0c6478d45c3d",
 "manifest.json": "2d704e166649461cb7c1f16a7e1918f9",
 "flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
 "icons/Icon-192.png": "220aa06e3eb9573d570cc2cc23d9d372",
@@ -148,6 +147,7 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+/*
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
@@ -160,6 +160,7 @@ self.addEventListener('message', (event) => {
     return;
   }
 });
+*/
 // Download offline will check the RESOURCES for all files not in the cache
 // and populate them.
 async function downloadOffline() {
